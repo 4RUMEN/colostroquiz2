@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Substitutos do Leite e Bem-estar Animal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #333;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .question {
+            margin-top: 20px;
+            color: #2c3e50;
+        }
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        .options button {
+            background-color: #3498db;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .options button:hover {
+            background-color: #2980b9;
+        }
+        .feedback {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .feedback.correct {
+            color: #27ae60;
+        }
+        .feedback.incorrect {
+            color: #c0392b;
+        }
+        .answer {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #e8f4f8;
+            border-left: 4px solid #3498db;
+        }
+        .show-answer {
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        .show-answer:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>Substitutos do Leite, Alimentos Sólidos, Alojamento e Bem-estar Animal</h1>
+        
+        <h2>Substitutos do Leite</h2>
+        <p>Os substitutos de leite devem imitar a composição do leite integral. Abaixo estão os componentes típicos de um bom substituto de leite:</p>
+        <ul>
+            <li>15-20% de gordura, comumente tallow (gordura animal) devido à sua similaridade com a gordura do leite.</li>
+            <li>70-80% de sólidos de leite, com a inclusão de lecitina para melhorar a incorporação de gordura.</li>
+            <li>Menos de 0,1% de fibra, pois altos níveis de fibra indicam proteínas de origem vegetal, menos digestíveis pelos bezerros jovens.</li>
+        </ul>
+        <div class="question" id="question1">
+            <p>Qual é o percentual recomendado de gordura em um substituto de leite para bezerros?</p>
+            <div class="options">
+                <button onclick="this.disabled=true; document.getElementById('q1-feedback').textContent='Incorreto. Tente novamente.'; document.getElementById('q1-feedback').className='feedback incorrect';">a) 5-10%</button>
+                <button onclick="this.disabled=true; document.getElementById('q1-feedback').textContent='Correto!'; document.getElementById('q1-feedback').className='feedback correct';">b) 15-20%</button>
+                <button onclick="this.disabled=true; document.getElementById('q1-feedback').textContent='Incorreto. Tente novamente.'; document.getElementById('q1-feedback').className='feedback incorrect';">c) 25-30%</button>
+            </div>
+            <p id="q1-feedback" class="feedback"></p>
+            <button onclick="var answer = this.nextElementSibling; answer.style.display = answer.style.display === 'block' ? 'none' : 'block';" class="show-answer">Ver explicação completa</button>
+            <div class="answer">
+                A resposta correta é b) 15-20%. O tipo de gordura, como tallow, é crucial para otimizar a digestão dos bezerros&#8203;:contentReference[oaicite:0]{index=0}.
+            </div>
+        </div>
+
+        <h2>Alimentos Sólidos</h2>
+        <p>Introduzir alimentos sólidos gradualmente após 3 semanas de vida é fundamental para o desenvolvimento do rúmen dos bezerros. A ração inicial deve incluir:</p>
+        <ul>
+            <li>Grãos: Fornecem energia essencial para o desenvolvimento.</li>
+            <li>Fibra: Importante para o desenvolvimento saudável do sistema digestivo.</li>
+        </ul>
+
+        <h2>Alojamento</h2>
+        <p>O alojamento adequado é crucial para o bem-estar dos bezerros:</p>
+        <ul>
+            <li>Espaço mínimo por bezerro: 2 m² para bezerros com menos de 60 kg.</li>
+            <li>Boa ventilação e drenagem para manter o ambiente seco e evitar doenças respiratórias.</li>
+        </ul>
+
+        <h2>Bem-estar Animal</h2>
+        <p>A manutenção de altos padrões de bem-estar animal reflete-se em melhor desempenho dos bezerros. As práticas recomendadas incluem:</p>
+        <ul>
+            <li>Fornecer ao bezerro liberdade de fome, sede, estresse térmico e medo.</li>
+            <li>Evitar práticas dolorosas, como a castração sem anestesia, e limitar o tempo de alojamento individual a 3 semanas&#8203;:contentReference[oaicite:1]{index=1}&#8203;:contentReference[oaicite:2]{index=2}.</li>
+        </ul>
+
+        <div class="question" id="question2">
+            <p>Qual é a área mínima recomendada para um bezerro com menos de 60 kg?</p>
+            <div class="options">
+                <button onclick="this.disabled=true; document.getElementById('q2-feedback').textContent='Incorreto. Tente novamente.'; document.getElementById('q2-feedback').className='feedback incorrect';">a) 1 m²</button>
+                <button onclick="this.disabled=true; document.getElementById('q2-feedback').textContent='Correto!'; document.getElementById('q2-feedback').className='feedback correct';">b) 2 m²</button>
+                <button onclick="this.disabled=true; document.getElementById('q2-feedback').textContent='Incorreto. Tente novamente.'; document.getElementById('q2-feedback').className='feedback incorrect';">c) 3 m²</button>
+            </div>
+            <p id="q2-feedback" class="feedback"></p>
+            <button onclick="var answer = this.nextElementSibling; answer.style.display = answer.style.display === 'block' ? 'none' : 'block';" class="show-answer">Ver explicação completa</button>
+            <div class="answer">
+                A resposta correta é b) 2 m². Isso proporciona espaço suficiente para o movimento e conforto dos bezerros&#8203;:contentReference[oaicite:3]{index=3}.
+            </div>
+        </div>
+    </div>
+</body>
+</html>
